@@ -27,7 +27,7 @@ public class OpenTelemetryController {
 	@GetMapping("/trace1")
 	public ResponseEntity<String> trace1() {
 		logger.info("Inside trace1 method of OpenTelemetryController");
-		String response = restTemplate.getForObject("http://localhost:8080/telemetry-service/trace2", String.class);
+		String response = restTemplate.getForObject("http://localhost:8099/telemetry-service/trace2", String.class);
 		return ResponseEntity.ok(response);
 	}
 

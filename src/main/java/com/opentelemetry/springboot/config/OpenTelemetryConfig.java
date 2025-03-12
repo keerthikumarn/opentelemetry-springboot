@@ -10,8 +10,7 @@ import io.opentelemetry.exporter.otlp.http.trace.OtlpHttpSpanExporter;
 public class OpenTelemetryConfig {
 
 	@Bean
-	public OtlpHttpSpanExporter otlpHttpSpanExporter(@Value("${tracing.url.endpoint}") String endpoint) {
-		return OtlpHttpSpanExporter.builder().setEndpoint(endpoint).build();
+	OtlpHttpSpanExporter otlpHttpSpanExporter(@Value("${tracing.url}") String url) {
+		return OtlpHttpSpanExporter.builder().setEndpoint(url).build();
 	}
-
 }
