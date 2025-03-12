@@ -1,9 +1,9 @@
 server:
-  port: 8098
+  port: 8090
 
 spring:
   application:
-    name: open-telemetry-app
+    name: opentelemetry-springboot
 
 tracing:
   url: http://localhost:4318/v1/traces
